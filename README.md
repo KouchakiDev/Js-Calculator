@@ -23,12 +23,3 @@ Features live results, history, safe evaluation, and RTL-friendly UI.
 
 ---
 
-## 🚀 Quick Start
-
-1. **Clone or download** the repository.
-2. Open `index.html` directly in your browser **or** serve the folder with any static server:
-   ```bash
-   # Example static servers
-   npx serve .
-   # or
-   python -m http.server 8080
