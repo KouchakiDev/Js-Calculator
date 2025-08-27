@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ماشین‌حساب </title>
+  <link rel="stylesheet" , href="style.css">
+</head>
+<body>
+  <div class="calc">
+    <header>
+      <h1>ماشین‌حساب </h1>
+    </header>
+
+    <div class="display">
+      <input id="exprInput" type="text" dir="ltr" inputmode="decimal" autocomplete="off" placeholder="مثلاً: (2+3)*4 یا 2**3" />
+      <div class="result-row">
+        <strong>نتیجه:</strong>
+        <div id="result" aria-live="polite"></div>
+      </div>
+      <div class="hint">کلیدها: اعداد، + - × ÷ ( ) . %  |  Enter = محاسبه، Backspace = حذف، Ctrl+L = پاک‌سازی</div>
+    </div>
+
+    <div class="pad" aria-label="کلیدهای ماشین‌حساب">
+      <!-- ردیف 1 -->
+      <button class="key clear" id="clearBtn">پاک‌سازی</button>
+      <button class="key" id="backBtn">⌫</button>
+      <button class="key op" data-key="(">(</button>
+      <button class="key op" data-key=")">)</button>
+
+      <!-- ردیف 2 -->
+      <button class="key" data-key="7">7</button>
+      <button class="key" data-key="8">8</button>
+      <button class="key" data-key="9">9</button>
+      <button class="key op" data-key="÷">÷</button>
+
+      <!-- ردیف 3 -->
+      <button class="key" data-key="4">4</button>
+      <button class="key" data-key="5">5</button>
+      <button class="key" data-key="6">6</button>
+      <button class="key op" data-key="×">×</button>
+
+      <!-- ردیف 4 -->
+      <button class="key" data-key="1">1</button>
+      <button class="key" data-key="2">2</button>
+      <button class="key" data-key="3">3</button>
+      <button class="key op" data-key="-">−</button>
+
+      <!-- ردیف 5 -->
+      <button class="key" data-key="0">0</button>
+      <button class="key" data-key=",">,</button>
+      <button class="key" data-key=".">.</button>
+      <button class="key op" data-key="+">+</button>
+
+      <!-- ردیف 6 -->
+      <button class="key op" data-key="%">%</button>
+      <button class="key op" data-key="^">xʸ</button>
+      <button class="key equal" id="eqBtn">=</button>
+      <button class="key op" data-key="/">/</button>
+    </div>
+
+    <div class="history">
+      <h2>تاریخچه (برای استفاده دوباره کلیک کنید)</h2>
+      <ul id="history"></ul>
+    </div>
+
+    <div class="footer-note">فقط اعداد و عملگرهای + - * / ( ) . % مجازند. نماد × و ÷ خودکار به * و / تبدیل می‌شود. توان با xʸ ⇒ **.</div>
+  </div>
+
+  <script src = "script.js"></script>
+</body>
+</html>
